@@ -33,8 +33,6 @@ CLASS zcl_7178_test3 IMPLEMENTATION.
     DATA connection TYPE st_connection.
     DATA connection_nested TYPE st_Connection_nested.
 
-* Example 1: Access to structure components
-**********************************************************************
 
     connection-airport_from_id = 'ABC'.
     connection-airport_to_id   = 'XYZ'.
@@ -45,8 +43,7 @@ CLASS zcl_7178_test3 IMPLEMENTATION.
     connection_nested-message-msgid = 'ABC'.
     connection_nested-message-msgno = '123'.
 
-* Example 2: Filling a structure with VALUE #(    ).
-**********************************************************************
+
 
   CLEAR connection.
 
@@ -64,8 +61,6 @@ CLASS zcl_7178_test3 IMPLEMENTATION.
                                  carrier_name    = 'My Airline'
                          ).
 
-* Example 3: Wrong result after direct assignment
-**********************************************************************
 
     connection_nested = connection.
 
@@ -78,8 +73,7 @@ CLASS zcl_7178_test3 IMPLEMENTATION.
     out->write( |Component connection_nested-message-msgid: { connection_nested-message-msgid }| ).
     out->write( |Component connection_nested-carrier_name : { connection_nested-carrier_name  }| ).
 
-* Example 4: Assigning Structures using CORRESPONDING #( )
-**********************************************************************
+
     CLEAR connection_nested.
     connection_nested = CORRESPONDING #(  connection ).  "
 
