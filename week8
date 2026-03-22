@@ -73,7 +73,6 @@ flights = VALUE #( ( client        = sy-mandt
  out->write( ` ` ).
 
 
-* Sort with field list - default sort direction is ascending
 
  SORT flights BY currency_code plane_type_id.
 
