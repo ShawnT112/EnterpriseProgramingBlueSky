@@ -1,0 +1,18 @@
+@EndUserText.label : 'Employee'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zs4d400_7178_dat {
+
+  key client      : abap.clnt not null;
+  key employee_id : z7178_employee_id;
+  first_name      : /dmo/first_name;
+  last_name       : /dmo/last_name;
+  birth_date      : z7178_birth_date;
+  entry_date      : z7178_entry_date;
+  annual_salary   : z7178_annual_salary;
+  currency_code   : waers;
+  include /lrn/s_admin;
+
+}
