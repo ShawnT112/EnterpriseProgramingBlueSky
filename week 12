@@ -1,0 +1,14 @@
+@EndUserText.label : 'Department'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+
+define table z##depment {
+
+  key client      : abap.clnt not null;
+  key id          : z##_department_id;
+      description : /lrn/depment_description;
+      include     : /lrn/s_admin;
+
+}
